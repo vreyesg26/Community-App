@@ -25,7 +25,7 @@ export default function Home() {
 
   const checkUser = async () => {
     if (loading) return;
-    if (!user) route.push("./auth/login");
+    if (!user) route.push("auth/login");
   };
 
   useEffect(() => {
