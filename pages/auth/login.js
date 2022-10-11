@@ -25,7 +25,7 @@ export default function Login() {
     if (user) {
       route.push("/");
     } else {
-      route.push("/auth/login");
+      console.log("login");
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
