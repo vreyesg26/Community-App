@@ -5,7 +5,6 @@ import { db } from "../utils/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
 import { HiOutlineEmojiSad } from "react-icons/hi";
-import { BiLike } from "react-icons/bi";
 
 export default function Home() {
   const [allPosts, setAllPosts] = useState([]);

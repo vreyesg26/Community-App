@@ -56,7 +56,7 @@ export default function Dashboard() {
       <div>
         {posts.length == 0 ? (
           <h2 className="text-sm my-3 text-gray-400">
-            You haven't post anything yet.
+            You havent post anything yet.
           </h2>
         ) : (
           posts.map((post) => {
