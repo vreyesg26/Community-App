@@ -42,6 +42,7 @@ export default function Dashboard() {
   //Get user data
   useEffect(() => {
     getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, loading]);
 
   return (

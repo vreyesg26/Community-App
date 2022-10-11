@@ -11,7 +11,7 @@ export default function Nav() {
       <div className="flex gap-2">
         <Link href="/">
           <div className="flex gap-2">
-            <img className="w-12 cursor-pointer" src="/logo.png" />
+            <img className="w-12 cursor-pointer" src="/logo.png" alt="logo" />
             <button className="text-base font-medium">Community</button>
           </div>
         </Link>
