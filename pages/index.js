@@ -23,14 +23,10 @@ export default function Home() {
     return unsubscribe;
   };
 
-  const checkUser = async () => {
-    if (loading) return;
-    if (!user) route.push("auth/login");
-  };
-
   useEffect(() => {
+    if (!user) route.push("auth/login");
     getPosts();
-  }, [checkUser()]);
+  }, []);
 
   return (
     <div>
