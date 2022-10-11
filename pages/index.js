@@ -24,7 +24,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (!user) route.push("auth/login");
     getPosts();
   }, []);
 
