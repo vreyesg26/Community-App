@@ -1,13 +1,17 @@
 import Head from "next/head";
 import Message from "../components/Message";
 import { useEffect, useState } from "react";
-import { db } from "../utils/firebase";
+import { auth, db } from "../utils/firebase";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Link from "next/link";
 import { HiOutlineEmojiSad } from "react-icons/hi";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const [allPosts, setAllPosts] = useState([]);
+  const [user, loading] = useAuthState(auth);
+  const route = useRouter();
 
   const getPosts = async () => {
     const collectionRef = collection(db, "posts");
@@ -20,6 +24,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    if (!user) route.push('/auth/login');
     getPosts();
   }, []);
 
