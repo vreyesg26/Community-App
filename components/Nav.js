@@ -9,7 +9,7 @@ export default function Nav() {
   return (
     <nav className="flex justify-between items-center py-10 px-3 z-10 -mx-5  index sticky top-0 bg-white">
       <div className="flex gap-2">
-        <Link href="/">
+        <Link href={`${user ? '/feed' : '/'} `}>
           <div className="flex gap-2">
             <img className="w-12 cursor-pointer" src="/logo.png" alt="logo" />
             <button className="text-base font-medium">Community</button>
