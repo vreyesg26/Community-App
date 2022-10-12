@@ -59,7 +59,7 @@ export default function Post() {
   //Check our user
   const checkUser = async () => {
     if (loading) return;
-    if (!user) route.push("/auth/login");
+    if (!user) route.push("/");
     if (routeData.id) {
       setPost({ description: routeData.description, id: routeData.id });
     }

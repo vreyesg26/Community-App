@@ -22,7 +22,7 @@ export default function Details() {
   //Submit a message
   const submitMessage = async () => {
     //Check if the user is logged
-    if (!auth.currentUser) return router.push("/auth/login");
+    if (!auth.currentUser) return router.push("/");
     if (!message) {
       toast.error("Don't leave an empty message");
       return;

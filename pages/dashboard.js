@@ -23,7 +23,7 @@ export default function Dashboard() {
   //See if user is logged
   const getData = async () => {
     if (loading) return;
-    if (!user) return route.push("/auth/login");
+    if (!user) return route.push("/");
     const collectionRef = collection(db, "posts");
     const q = query(collectionRef, where("user", "==", user.uid));
     const unsubscribe = onSnapshot(q, (snapshot) => {
