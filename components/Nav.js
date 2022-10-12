@@ -18,7 +18,7 @@ export default function Nav() {
       </div>
       <ul className="flex items-center gap-10">
         {!user && (
-          <Link href={"/auth/login"}>
+          <Link href={"/"}>
             <div className="flex items-center justify-center">
               <FaRocket className="text-gray-500 text-lg" />
               <a className="py-2 px-3 text-gray-500 text-lg rounded-lg font-medium ">
